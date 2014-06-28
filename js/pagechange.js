@@ -2,8 +2,6 @@
 
 (function ($, document) {
 
-    var loginData = {};
-
 
     $.zz_page = function (el, options) {
 
@@ -13,12 +11,21 @@
          */
         var defaults = {
 
+                /**
+                 * hyperlink selector
+                 */
                 triggerElement: 'a[href]:not([target="_blank"])',
 
+                /**
+                 * content element identification
+                 */
                 content: {
                     wrap: '.main_content'
                 },
 
+                /**
+                 * show animation function
+                 */
                 showfunction : showAnimation
             },
 
@@ -34,7 +41,6 @@
              * @type {Object}
              */
             $el = $(el),
-            el = el,
 
             /**
              * loaded pages since last onLoad
@@ -99,9 +105,7 @@
 
         plugin.append_events = function() {
 
-//            $(document).delegate(plugin.settings.triggerElement, 'click', function(e) {
             $(plugin.settings.triggerElement).on('click', clickEvent);
-//            $(document).on('click', plugin.settings.triggerElement, function(e) {
 
         };
 
@@ -194,7 +198,7 @@
         }
 
         plugin.init();
-    }
+    };
 
     /**
      * let jQuery know about the plugin

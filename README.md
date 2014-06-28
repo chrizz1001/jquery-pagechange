@@ -1,7 +1,7 @@
-jquery-pagechange
+zz_page
 =================
 
-jquery-pagechange is a small script to make any website loading it´s content via AJAX
+zz_page is a small script to make any website loading it´s content via AJAX
 
 Requirements:
 
